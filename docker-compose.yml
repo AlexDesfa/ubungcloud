@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  gcloud:
+#    image: desfa/ubungcloud
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      DEBUG: 1
+    command: bash
+    volumes:
+      - $PWD/testgcloud:/testgcloud
+
